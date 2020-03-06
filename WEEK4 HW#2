@@ -1,0 +1,29 @@
+import java.util.Arrays;
+import java.util.Iterator;
+import java.util.TreeSet;
+
+public class Week4HW2 {
+  
+    public static void main(String[] args) {
+        TreeSet<Integer> set1 = new TreeSet(Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10));
+
+        for(int i = 0; i <= 10; ++i) {
+            set1.add(i);
+        }
+
+        System.out.println(set1);
+        Iterator OddNum = set1.iterator();
+
+        while(OddNum.hasNext()) {
+            Integer i = (Integer)OddNum.next();
+            if (i % 2 == 1) {
+                OddNum.remove();
+            }
+        }
+
+        System.out.println(set1);
+        TreeSet<Integer> set2 = new TreeSet(Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10));
+        TreeSet<Integer> set3 = new TreeSet(Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10));
+        set2.addAll(set3);
+        System.out.println(" SETS CANNOT BE DUPLICATE AS YOU CAN SEE IT ONLY PRINTS OUT ONE LIST FROM THE TWO I WANTED TO PRINT OUT :  \n" + set2);
+    }
