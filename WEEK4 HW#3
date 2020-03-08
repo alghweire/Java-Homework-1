@@ -1,0 +1,27 @@
+import java.util.HashMap;
+
+public class Week4HW3Maps {
+    
+    public static void main(String[] args) {
+    
+        HashMap<String, String> realmadrid1 = new HashMap();
+        
+        realmadrid1.put("Benzema", "Forward");
+        realmadrid1.put("Carvajal", "Defender ");
+        realmadrid1.put("Isco", " Midfielder");
+        realmadrid1.put("Marcelo", " Defender ");
+        realmadrid1.put("Asensio", "Forward");
+        realmadrid1.put("Bale", "Forward");
+        
+        HashMap<String, String> realmadrid2 = new HashMap();
+        
+        realmadrid2.putAll(realmadrid1);
+        realmadrid1.remove("Benzema");
+        
+        System.out.println("This soccer player plays the " + (String)realmadrid1.get("Benzema") + " position ");
+        
+        System.out.println("This soccer player plays the " + (String)realmadrid1.get("Carvajal") + " position ");
+        
+        System.out.println("This soccer player plays the " + (String)realmadrid2.get("Marcelo") + " position ");
+    }
+}
