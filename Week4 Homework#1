@@ -1,0 +1,38 @@
+import java.util.ArrayList;
+        import java.util.Arrays;
+
+public class Week4HW1 {
+
+    public static void main ( String [] args ) {
+
+        //---------------------------------------------------------------------------------------------------------------------//
+        // part A Add integers  1- 10 and iterate through for loop.
+
+        ArrayList<Integer> list = new ArrayList<Integer>(Arrays.asList(1,2,3,4,5,6,7,8,9,10));
+        for( int i = 0 ; i < 10 ; i ++ ){
+            System.out.println(list.get(i));
+        }
+        
+        //---------------------------------------------------------------------------------------------------------------------- //
+        // Part B // Remove 2's
+
+        ArrayList<Integer> list1 = new ArrayList<Integer>(Arrays.asList(1,2,3,6,7,3,2,1));
+        ArrayList<Integer> list2 = new ArrayList<Integer>(Arrays.asList(2));
+        list1.removeAll(list2);
+        System.out.println(list1);
+        //----------------------------------------------------------------------------------------------------------------------//
+        //PartC // remove odd numbers
+
+        for ( int i = list1.size()-1 ; i >= 0 ; i-- )  {
+
+            if ( list1.get(i) % 2 == 1) {
+                list1.remove(i);
+            }
+            System.out.println(list1);
+        }
+
+
+
+    }
+
+}
